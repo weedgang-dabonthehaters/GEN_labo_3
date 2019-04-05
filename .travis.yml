@@ -5,5 +5,5 @@ cache:
     - $HOME/.m2
 
 script:
-  - cd GENLabo3
+  - cd GenLabo3
   - mvn clean package
