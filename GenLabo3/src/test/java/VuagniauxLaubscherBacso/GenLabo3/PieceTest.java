@@ -12,14 +12,15 @@ class PieceTest {
 
         try {
             assertEquals("test", piece.getLocation().toString());
-        } catch (Exception e) { }
-
-        piece = new Piece(null);
-
-        try {
         } catch (Exception e) {
-            assertEquals("No location found!", e.toString());
+            e.printStackTrace();
         }
     }
 
+    @Test
+    public void aPieceThatAsNoLocationShouldThrowAnError() {
+        final Piece piece = new Piece(null);
+
+        assertThrows(Exception.class, () -> piece.getLocation());
+    }
 }
