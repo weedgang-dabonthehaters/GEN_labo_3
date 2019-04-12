@@ -8,7 +8,24 @@ class PlayerTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+
+		try {
+			String name;
+			Die[] dies = { new Die(), new Die() };
+			Board board = new Board(40);
+			Piece piece = new Piece(board.getFirstSquare());
+
+			Player player = new Player("playerTest", dies, piece, board);
+
+			assertEquals("Go", piece.getLocation().toString());
+
+			player.takeTurn();
+
+			assertNotEquals("Go", piece.getLocation().toString());
+		} catch (Exception e) {
+			fail("unespected error");
+		}
+
 	}
 
 }
