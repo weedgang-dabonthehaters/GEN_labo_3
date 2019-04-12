@@ -1,19 +1,19 @@
 package VuagniauxLaubscherBacso.GenLabo3;
 
 public class Square {
-	private String name;
+    private String name;
 
-	public Square(String name) {
-		this.name = name;
-	}
+    public Square(String name) {
+        this.name = name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public String toString() {
-		return name;
-	}
-	
+    @Override
+    public String toString() {
+        return name;
+    }
+
 }

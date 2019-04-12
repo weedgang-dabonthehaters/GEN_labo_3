@@ -6,9 +6,20 @@ import org.junit.jupiter.api.Test;
 
 class PieceTest {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+    @Test
+    public void aPieceShouldHaveALocation() {
+        Piece piece = new Piece(new Square("test"));
+
+        try {
+            assertEquals("test", piece.getLocation().toString());
+        } catch (Exception e) { }
+
+        piece = new Piece(null);
+
+        try {
+        } catch (Exception e) {
+            assertEquals("No location found!", e.toString());
+        }
+    }
 
 }
