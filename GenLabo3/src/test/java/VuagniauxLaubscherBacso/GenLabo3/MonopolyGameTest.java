@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 class MonopolyGameTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void aGameShouldThrowAnErrorIfThereIsNotEnoughPlayers() {
+		assertThrows(Exception.class, () -> new MonopolyGame(1));
+	}
+
+	@Test
+	void aGameShouldThrowAnErrorIfThereIsToManyPlayers() {
+		assertThrows(Exception.class, () -> new MonopolyGame(9));
 	}
 
 }
