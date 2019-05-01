@@ -1,6 +1,8 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Players;
 
-import java.util.ArrayList;
+import VuagniauxLaubscherBacso.GenLabo3.Cups.Cup;
+import VuagniauxLaubscherBacso.GenLabo3.Game.Board;
+import VuagniauxLaubscherBacso.GenLabo3.Squares.Square;
 
 public class Player {
 
@@ -39,7 +41,7 @@ public class Player {
 
         cup.roll();
         fv = cup.getTotal();
-
+        
         System.out.println(this.name + " rolled the cup and got " + fv);
 
         try {
@@ -49,6 +51,7 @@ public class Player {
             System.out.println(this.name + " move from " + oldLoc.getName() + " to " + newLoc.getName());
 
             piece.setLocation(newLoc);
+            piece.getLocation().landedOn(this);
 
         } catch (Exception e) {
             e.printStackTrace();

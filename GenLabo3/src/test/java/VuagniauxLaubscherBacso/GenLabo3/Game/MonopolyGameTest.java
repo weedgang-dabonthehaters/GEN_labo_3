@@ -1,9 +1,10 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Game;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class MonopolyGameTest {
 
@@ -16,14 +17,12 @@ class MonopolyGameTest {
 	void aGameShouldThrowAnErrorIfThereIsToManyPlayers() {
 		assertThrows(Exception.class, () -> new MonopolyGame(9));
 	}
-
-	@RepeatedTest(10)
-	void aGameShouldPlayNormaly(){
-		try{
-			MonopolyGame game = new MonopolyGame(4);
-			game.playGame();
-		} catch (Exception e){
-			e.printStackTrace();
+	
+	@ParameterizedTest
+	@ValueSource(ints = {-1, 0, 1, 4, 2, 6, 8, 10})
+	void aGameShouldWorkWithAGoodNumberOfPlayers(int value) {
+		if(value < 2 || value > 8) {
+			assertThrows(Exception.class, () -> new MonopolyGame(value));
 		}
 	}
 }

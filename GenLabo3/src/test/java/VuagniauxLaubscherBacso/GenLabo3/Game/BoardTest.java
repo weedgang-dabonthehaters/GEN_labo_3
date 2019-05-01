@@ -1,8 +1,10 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Game;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import VuagniauxLaubscherBacso.GenLabo3.Squares.Square;
 
 class BoardTest {
 

@@ -1,6 +1,9 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Game;
 
 import java.util.ArrayList;
+
+import VuagniauxLaubscherBacso.GenLabo3.Cups.Cup;
+import VuagniauxLaubscherBacso.GenLabo3.Players.Player;
 
 public class MonopolyGame {
     private int roundCnt = 1;
@@ -44,5 +47,14 @@ public class MonopolyGame {
         for (Player player : this.players) {
             player.takeTurn();
         }
+    }
+    
+    public static void main(String[] args) {
+    	try{
+			MonopolyGame game = new MonopolyGame(4);
+			game.playGame();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
     }
 }

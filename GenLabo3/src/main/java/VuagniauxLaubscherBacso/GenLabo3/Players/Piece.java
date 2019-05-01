@@ -1,4 +1,6 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Players;
+
+import VuagniauxLaubscherBacso.GenLabo3.Squares.Square;
 
 public class Piece {
     Square location;
