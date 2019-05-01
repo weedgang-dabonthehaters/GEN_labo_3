@@ -1,16 +1,14 @@
 package VuagniauxLaubscherBacso.GenLabo3;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class MonopolyGame {
-    private int roundCnt;
+    private int roundCnt = 1;
     private final int nbRounds = 20;
 
     private Board board;
     private ArrayList<Player> players;
 
-    private final int nbDie = 2;
     private ArrayList<Die> dies;
 
     public MonopolyGame(int nbPlayers) throws Exception {
@@ -34,6 +32,10 @@ public class MonopolyGame {
 
     public void playGame() {
         while (this.roundCnt <= this.nbRounds) {
+            System.out.println("--------------------");
+            System.out.println("Round " + this.roundCnt);
+            System.out.println("--------------------");
+
             playRound();
             ++this.roundCnt;
         }
