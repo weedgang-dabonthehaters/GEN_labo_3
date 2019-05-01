@@ -9,15 +9,14 @@ public class MonopolyGame {
     private Board board;
     private ArrayList<Player> players;
 
-    private ArrayList<Die> dies;
+    private final int nbDie = 2;
+    private Cup dies;
 
     public MonopolyGame(int nbPlayers) throws Exception {
         if (nbPlayers >= 2 && nbPlayers <= 8) {
             this.board = new Board(40);
 
-            this.dies = new ArrayList<Die>();
-            this.dies.add(new Die());
-            this.dies.add(new Die());
+            dies = new Cup(nbDie);
 
             this.players = new ArrayList<Player>();
             for (int i = 1; i <= nbPlayers; ++i) {
