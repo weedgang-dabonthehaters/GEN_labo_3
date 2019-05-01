@@ -6,4 +6,4 @@ cache:
 
 script:
   - cd GenLabo3
-  - mvn clean package
+  - mvn clean install
