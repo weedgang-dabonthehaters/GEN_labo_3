@@ -1,7 +1,5 @@
 package VuagniauxLaubscherBacso.GenLabo3;
 
-import java.util.ArrayList;
-
 public class Player {
 
     private String name;
@@ -19,9 +17,9 @@ public class Player {
         this.cash = 1500;
 
     }
-    
+
     public Piece getPiece() {
-    	return piece;
+        return piece;
     }
 
     public String getName() {
@@ -39,30 +37,32 @@ public class Player {
 
         cup.roll();
         fv = cup.getTotal();
-        	
+        
         System.out.println(this.name + " rolled the cup and got " + fv);
 
         try {
             oldLoc = piece.getLocation();
             newLoc = board.getSquare(oldLoc, fv);
+
             System.out.println(this.name + " move from " + oldLoc.getName() + " to " + newLoc.getName());
+
             piece.setLocation(newLoc);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
     public void addCash(int amount) {
-    	this.cash += amount;
+        this.cash += amount;
     }
-    
+
     public void reduceCash(int amount) {
-    	this.cash -= amount;
+        this.cash -= amount;
     }
-    
+
     public int getNetWorth() {
-    	return cash;
+        return cash;
     }
 
 }

@@ -29,7 +29,7 @@ class PlayerTest {
 		}
 
 	}
-	
+
 	@Test
 	void cashTest() {
 		try {
@@ -39,13 +39,13 @@ class PlayerTest {
 			Player player = new Player("playerTest", c, board);
 
 			assertEquals(1500, player.getNetWorth());
-			
+
 			player.addCash(2000);
-			
+
 			assertEquals(3500, player.getNetWorth());
-			
+
 			player.reduceCash(2000);
-			
+
 			assertEquals(1500, player.getNetWorth());
 
 		} catch (Exception e) {
