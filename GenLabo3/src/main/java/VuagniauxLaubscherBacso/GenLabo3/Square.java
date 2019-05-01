@@ -15,5 +15,4 @@ public class Square {
     public String toString() {
         return name;
     }
-
 }

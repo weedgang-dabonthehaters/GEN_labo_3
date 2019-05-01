@@ -6,10 +6,12 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 class PlayerTest {
 
 	@Test
-	void test() {
+	void thePlayerNeedToStartInTheGoSquare() {
 
 		try {
 			ArrayList<Die> dies = new ArrayList<Die>();
