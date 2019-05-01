@@ -17,6 +17,10 @@ public class Player {
         this.board = board;
 
     }
+    
+    public Piece getPiece() {
+    	return piece;
+    }
 
     public String getName() {
         return name;
