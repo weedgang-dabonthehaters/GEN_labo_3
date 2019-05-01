@@ -1,19 +1,21 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Players;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import VuagniauxLaubscherBacso.GenLabo3.Squares.RegularSquare;
+
 class PieceTest {
 
     @Test
     public void aPieceShouldHaveALocation() {
-        Piece piece = new Piece(new Square("test"));
+        Piece piece = new Piece(new RegularSquare("test"));
 
         try {
             assertEquals("test", piece.getLocation().toString());
         } catch (Exception e) {
-            e.printStackTrace();
+        	fail("unespected error");
         }
     }
 

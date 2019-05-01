@@ -1,4 +1,4 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Cups;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

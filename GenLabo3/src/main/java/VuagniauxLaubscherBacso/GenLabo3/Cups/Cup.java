@@ -1,4 +1,4 @@
-package VuagniauxLaubscherBacso.GenLabo3;
+package VuagniauxLaubscherBacso.GenLabo3.Cups;
 
 import java.util.ArrayList;
 
