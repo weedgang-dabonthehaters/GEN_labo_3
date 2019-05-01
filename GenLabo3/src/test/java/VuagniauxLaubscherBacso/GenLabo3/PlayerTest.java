@@ -4,24 +4,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 class PlayerTest {
 
 	@Test
-	void test() {
+	void thePlayerNeedToStartInTheGoSquare() {
 
 		try {
-			String name;
-			Die[] dies = { new Die(), new Die() };
+			ArrayList<Die> dies = new ArrayList<Die>();
+			dies.add(new Die());
+			dies.add(new Die());
 			Board board = new Board(40);
-			Piece piece = new Piece(board.getFirstSquare());
 
-			Player player = new Player("playerTest", dies, piece, board);
+			Player player = new Player("playerTest", dies, board);
 
-			assertEquals("Go", piece.getLocation().toString());
+			assertEquals("Go", player.getPiece().getLocation().getName());
 
 			player.takeTurn();
 
-			assertNotEquals("Go", piece.getLocation().toString());
+			assertNotEquals("Go", player.getPiece().getLocation().getName());
 		} catch (Exception e) {
 			fail("unespected error");
 		}

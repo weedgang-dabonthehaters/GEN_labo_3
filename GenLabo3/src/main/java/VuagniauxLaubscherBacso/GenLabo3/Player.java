@@ -26,6 +26,8 @@ public class Player {
         this.name = name;
     }
 
+    public Piece getPiece(){ return this.piece; }
+
     public void takeTurn() {
 
         Square oldLoc, newLoc;
