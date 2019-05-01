@@ -31,5 +31,30 @@ class PlayerTest {
 		}
 
 	}
+	
+	@Test
+	void cashTest() {
+		try {
+			ArrayList<Die> dies = new ArrayList<Die>();
+			dies.add(new Die());
+			dies.add(new Die());
+			Board board = new Board(40);
+
+			Player player = new Player("playerTest", dies, board);
+
+			assertEquals(1500, player.getNetWorth());
+			
+			player.addCash(2000);
+			
+			assertEquals(3500, player.getNetWorth());
+			
+			player.reduceCash(2000);
+			
+			assertEquals(1500, player.getNetWorth());
+
+		} catch (Exception e) {
+			fail("unespected error");
+		}
+	}
 
 }
