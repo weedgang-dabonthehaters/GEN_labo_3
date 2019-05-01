@@ -29,11 +29,6 @@ public class Player {
     public Piece getPiece(){ return this.piece; }
 
     public void takeTurn() {
-
-        System.out.println("--------------------");
-        System.out.println(this.name + " turn");
-        System.out.println("--------------------");
-
         Square oldLoc, newLoc;
         int fv = 0;
 
