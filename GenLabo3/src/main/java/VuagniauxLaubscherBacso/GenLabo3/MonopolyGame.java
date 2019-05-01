@@ -22,7 +22,7 @@ public class MonopolyGame {
             this.dies.add(new Die());
 
             this.players = new ArrayList<Player>();
-            for (int i = 0; i < nbPlayers; ++i) {
+            for (int i = 1; i <= nbPlayers; ++i) {
                 this.players.add(new Player("player " + i, this.dies, this.board));
             }
         } else {

@@ -16,4 +16,13 @@ class MonopolyGameTest {
 		assertThrows(Exception.class, () -> new MonopolyGame(9));
 	}
 
+	@Test
+	void aGameShouldPlayNormaly(){
+		try{
+			MonopolyGame game = new MonopolyGame(5);
+			game.playGame();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+	}
 }

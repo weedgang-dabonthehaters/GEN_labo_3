@@ -30,17 +30,26 @@ public class Player {
 
     public void takeTurn() {
 
+        System.out.println("--------------------");
+        System.out.println(this.name + " turn");
+        System.out.println("--------------------");
+
         Square oldLoc, newLoc;
         int fv = 0;
 
         for (Die die : dies) {
             die.roll();
             fv += die.getFaceValue();
+
+            System.out.println(this.name + " rolled the dice and got " + die.getFaceValue());
         }
 
         try {
             oldLoc = piece.getLocation();
             newLoc = board.getSquare(oldLoc, fv);
+
+            System.out.println(this.name + " move from " + oldLoc.getName() + " to " + newLoc.getName());
+
             piece.setLocation(newLoc);
 
         } catch (Exception e) {
